@@ -4,19 +4,24 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-devDependencies:
-  '@nuxt/devtools':
-    specifier: latest
-    version: 1.0.0(nuxt@3.8.0)(vite@4.5.0)
-  nuxt:
-    specifier: ^3.8.0
-    version: 3.8.0(vite@4.5.0)
-  vue:
-    specifier: ^3.3.6
-    version: 3.3.6
-  vue-router:
-    specifier: ^4.2.5
-    version: 4.2.5(vue@3.3.6)
+importers:
+
+  .: {}
+
+  packages/app:
+    devDependencies:
+      '@nuxt/devtools':
+        specifier: latest
+        version: 1.0.0(nuxt@3.8.0)(vite@4.5.0)
+      nuxt:
+        specifier: ^3.8.0
+        version: 3.8.0(vite@4.5.0)
+      vue:
+        specifier: ^3.3.6
+        version: 3.3.6
+      vue-router:
+        specifier: ^4.2.5
+        version: 4.2.5(vue@3.3.6)
 
 packages:
 
@@ -3272,7 +3277,6 @@ packages:
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
-    requiresBuild: true
     dependencies:
       safer-buffer: 2.1.2
     dev: true
@@ -5115,7 +5119,6 @@ packages:
 
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
-    requiresBuild: true
     dev: true
     optional: true
 
