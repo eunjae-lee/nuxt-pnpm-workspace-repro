@@ -1,7 +1,11 @@
 {
   "name": "root",
+  "private": true,
   "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "pnpm -F nuxt-app dev"
+    "dev": "yarn workspace nuxt-app dev"
   }
 }
